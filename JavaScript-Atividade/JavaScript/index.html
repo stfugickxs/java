@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="../imagens/airplane.webp" type="image/x-icon">
+  <title>Aeroporto</title>
+
+  
+  <style>
+    body {
+        background-color: rgb(80, 78, 78);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: rgb(150, 78, 78);
+      color: #fff;
+      padding: 20px;
+    }
+
+    section {
+      display: flex;
+    }
+
+    .flight {
+      flex: 1;
+      border: 1px solid #333;
+      padding: 40px;
+    }
+  </style>
+
+
+</head>
+<body>
+  <header>
+    <h1 id="airportName"></h1>
+  </header>
+<br><br><br>
+  <section>
+    <div class="flight" id="flight1"></div>
+    <div class="flight" id="flight2"></div>
+    <div class="flight" id="flight3"></div>
+  </section>
+
+  <script>
+    // Definindo o nome do aeroporto
+    var airportName = "Aeroporto Internacional do BRASIL";
+
+    // Imprimindo o nome do aeroporto no header
+    document.getElementById("airportName").innerText = airportName;
+
+    // Definindo o array com as informações dos voos
+    var flights = [
+      {
+        number: "VOO423",
+        destination: "Recife",
+        departureTime: "14:35",
+        airline: "GOL"
+      },
+      {
+        number: "VOO567",
+        destination: "Estados Unidos",
+        departureTime: "16:45",
+        airline: "LATAM"
+      },
+      {
+        number: "VOO789",
+        destination: "França",
+        departureTime: "18:20",
+        airline: "AIRFRANCE"
+      }
+    ];
+
+    document.getElementById("flight1").innerText = "Número do voo: " + flights[0].number + "\nDestino: " + flights[0].destination + "\nHorário de embarque: " + flights[0].departureTime + "\nNome da empresa: " + flights[0].airline;
+
+    document.getElementById("flight2").innerText = "Número do voo: " + flights[1].number + "\nDestino: " + flights[1].destination + "\nHorário de embarque: " + flights[1].departureTime + "\nNome da empresa: " + flights[1].airline;
+
+    document.getElementById("flight3").innerText = "Número do voo: " + flights[2].number + "\nDestino: " + flights[2].destination + "\nHorário de embarque: " + flights[2].departureTime + "\nNome da empresa: " + flights[2].airline;
+
+    var aeroporto = "Aeroporto internacional do BRASIL";
+    console.log(aeroporto);
+    
+    document.getElementById('NomeAeroporto').innerHTML = aeroporto
+
+  </script>
+</body>
+</html>
